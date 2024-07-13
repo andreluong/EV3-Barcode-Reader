@@ -18,8 +18,8 @@ task main()
 		return;
 	}
 
-	// Gets the color reflection and adds it to the datalog for ~4 secs
-	for (int i = 0; i < 400; i++) {
+	// Gets the color reflection and adds it to the datalog for ~0.75 secs to measure ~18mm barcode
+	for (int i = 0; i < 75; i++) {
 		int reflection = getColorReflected(lightSensor);
 		displayCenteredBigTextLine(3, "%d", reflection);
 		datalogAddShort(0, reflection);
